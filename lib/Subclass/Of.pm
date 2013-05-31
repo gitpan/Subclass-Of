@@ -8,7 +8,7 @@ no warnings qw(redefine prototype);
 
 BEGIN {
 	$Subclass::Of::AUTHORITY = 'cpan:TOBYINK';
-	$Subclass::Of::VERSION   = '0.000_02';
+	$Subclass::Of::VERSION   = '0.000_03';
 }
 
 use B qw(perlstring);
@@ -47,7 +47,7 @@ sub import
 		my $subclass = $me->_build_subclass($base, \%opts);
 		my @aliases  = $opts{-as} ? @{$opts{-as}} : ($base =~ /(\w+)$/);
 		
-		my $constant = eval sprintf(q{sub(){%s}}, perlstring($subclass));
+		my $constant = eval sprintf(q/sub () { %s if $] }/, perlstring($subclass));
 		$i_made_this{refaddr($constant)} = $subclass;
 		
 		for my $a (@aliases)
