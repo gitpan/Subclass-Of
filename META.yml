@@ -3,11 +3,14 @@ abstract: 'import a magic subclass'
 author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: 6.36
+  ExtUtils::MakeMaker: 6.59
+  Test::More: 0.96
+  Test::Requires: 0
+  Test::Warn: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.36
+  ExtUtils::MakeMaker: 6.59
 distribution_type: module
-dynamic_config: 0
+dynamic_config: 1
 generated_by: 'Module::Install version 1.06'
 keywords: []
 license: perl
@@ -24,14 +27,15 @@ no_index:
 recommends:
   Moo: 1.002000
 requires:
+  Exporter::TypeTiny: 0
   List::MoreUtils: 0
   Module::Runtime: 0
   Sub::Name: 0
   namespace::clean: 0
-  perl: 5.005
+  perl: 5.8.0
 resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=Subclass-Of
   homepage: https://metacpan.org/release/Subclass-Of
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-subclass-of
-version: 0.000_01
+version: 0.000_02

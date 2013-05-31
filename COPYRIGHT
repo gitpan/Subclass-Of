@@ -3,6 +3,25 @@ Upstream-Name: Subclass-Of
 Upstream-Contact: Toby Inkster <tobyink@cpan.org>
 Source: https://metacpan.org/release/Subclass-Of
 
+Files: lib/Subclass/Of.pm
+ t/01basic.t
+ t/02moose.t
+ t/03moo.t
+ t/04mouse.t
+ t/05moomoose.t
+ t/06roletiny.t
+ t/07warnings.t
+ t/lib/Local/Moo/Class.pm
+ t/lib/Local/Moo/Role.pm
+ t/lib/Local/Moose/Class.pm
+ t/lib/Local/Moose/Role.pm
+ t/lib/Local/Mouse/Class.pm
+ t/lib/Local/Mouse/Role.pm
+ t/lib/Local/Perl/Class.pm
+ t/lib/Local/RoleTiny/Role.pm
+Copyright: This software is copyright (c) 2013 by Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
 Files: CONTRIBUTING
  CREDITS
  Changes
@@ -24,22 +43,9 @@ Files: inc/Module/Install.pm
 Copyright: Copyright 2002 - 2012 Brian Ingerson, Audrey Tang and Adam Kennedy.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: lib/Subclass/Of.pm
- t/01basic.t
-Copyright: This software is copyright (c) 2013 by Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
 Files: inc/Module/Install/TrustMetaYml.pm
  inc/Module/Package/Dist/RDF.pm
 Copyright: This software is copyright (c) 2011-2012 by Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/YAML/Tiny.pm
-Copyright: Copyright 2006 - 2012 Adam Kennedy.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/Module/Install/Base.pm
-Copyright: Copyright 2003, 2004 by Audrey Tang <autrijus@autrijus.org>.
 License: GPL-1.0+ or Artistic-1.0
 
 Files: inc/Module/Install/Package.pm
@@ -54,6 +60,14 @@ Files: COPYRIGHT
 Copyright: None
 License: public-domain
 Comment: This file! Automatically generated.
+
+Files: inc/Module/Install/Base.pm
+Copyright: Copyright 2003, 2004 by Audrey Tang <autrijus@autrijus.org>.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: inc/YAML/Tiny.pm
+Copyright: Copyright 2006 - 2012 Adam Kennedy.
+License: GPL-1.0+ or Artistic-1.0
 
 License: Artistic-1.0
  This software is Copyright (c) 2013 by the copyright holder(s).

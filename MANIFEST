@@ -31,4 +31,18 @@ meta/makefile.pret
 meta/people.pret
 README
 t/01basic.t
+t/02moose.t
+t/03moo.t
+t/04mouse.t
+t/05moomoose.t
+t/06roletiny.t
+t/07warnings.t
+t/lib/Local/Moo/Class.pm
+t/lib/Local/Moo/Role.pm
+t/lib/Local/Moose/Class.pm
+t/lib/Local/Moose/Role.pm
+t/lib/Local/Mouse/Class.pm
+t/lib/Local/Mouse/Role.pm
+t/lib/Local/Perl/Class.pm
+t/lib/Local/RoleTiny/Role.pm
 SIGNATURE                                Public-key signature (added by MakeMaker)
