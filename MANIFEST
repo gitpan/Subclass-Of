@@ -2,6 +2,7 @@ Changes
 CONTRIBUTING
 COPYRIGHT
 CREDITS
+examples/simple-subclassing.pl
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm

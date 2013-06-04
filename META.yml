@@ -21,6 +21,7 @@ module_name: Subclass::Of
 name: Subclass-Of
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
@@ -38,4 +39,4 @@ resources:
   homepage: https://metacpan.org/release/Subclass-Of
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-subclass-of
-version: 0.000_03
+version: 0.000_04

@@ -4,29 +4,29 @@ NAME
 SYNOPSIS
     Create a subclass overriding a method:
 
-            use Subclass::Of "LWP::UserAgent",
-                    -as      => "ImpatientUA",
-                    -methods => [
-                            sub new {
-                                    my $self = ::SUPER();
-                                    $self->timeout(15);
-                                    $self->max_redirect(3);
-                                    return $self;
-                            }
-                    ];
-        
-            my $ua = ImpatientUA->new;
+       use Subclass::Of "LWP::UserAgent",
+          -as      => "ImpatientUA",
+          -methods => [
+             sub new {
+                my $self = ::SUPER();
+                $self->timeout(15);
+                $self->max_redirect(3);
+                return $self;
+             }
+          ];
+   
+       my $ua = ImpatientUA->new;
 
     Create a subclass at runtime, adding roles:
 
-            use Subclass::Of;
-        
-            my $subclass = subclass_of(
-                    "My::Class",
-                    -with => [qw/ My::Role Your::Role His::Role Her::Role /],
-            );
-        
-            my $object = $subclass->new;
+       use Subclass::Of;
+   
+       my $subclass = subclass_of(
+          "My::Class",
+          -with => [qw/ My::Role Your::Role His::Role Her::Role /],
+       );
+   
+       my $object = $subclass->new;
 
 DESCRIPTION
     Load a class, creating a subclass of it with additional roles (Moose,
@@ -36,7 +36,7 @@ DESCRIPTION
   Compile-Time Usage
     To create a subclass at compile-time, use the following syntax:
 
-            use SubClass::Of $base_class, %options;
+       use SubClass::Of $base_class, %options;
 
     The following options are supported:
 
@@ -65,11 +65,11 @@ DESCRIPTION
         Subclass::Of will export a lexically scoped alias for the package
         name. By lexically scoped I mean:
 
-                {
-                        use Subclass::Of "LWP::UserAgent", -as => "MyUA";
-                        # "MyUA" is available here ...
-                }
-                # ... but not here
+           {
+              use Subclass::Of "LWP::UserAgent", -as => "MyUA";
+              # "MyUA" is available here ...
+           }
+           # ... but not here
 
         By "alias", I mean a constant that returns the subclass' package
         name as a string. (See aliased.)
@@ -85,9 +85,9 @@ DESCRIPTION
   Run-Time Usage
     To create a subclass at compile-time, use the following syntax:
 
-            use Subclass::Of;
-        
-            my $subclass = subclass_of($base_class, %options);
+       use Subclass::Of;
+   
+       my $subclass = subclass_of($base_class, %options);
 
     Note that the "subclass_of" function is only exported if "use
     Subclass::Of" is called with no import list.
@@ -99,8 +99,8 @@ DESCRIPTION
     If you need to provide a wrapper for Subclass::Of, and thus install
     scoped aliases into other packages, use the "install" method:
 
-            require Subclass::Of;
-            Subclass::Of->install($base, -into => $target, %options);
+       require Subclass::Of;
+       Subclass::Of->install($base, -into => $target, %options);
 
 DIAGNOSTICS
     *Subclass::Of is overwriting function ...*
