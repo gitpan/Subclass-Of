@@ -8,7 +8,7 @@ no warnings qw(redefine prototype);
 
 BEGIN {
 	$Subclass::Of::AUTHORITY = 'cpan:TOBYINK';
-	$Subclass::Of::VERSION   = '0.000_04';
+	$Subclass::Of::VERSION   = '0.001';
 }
 
 use B qw(perlstring);
@@ -143,7 +143,7 @@ sub _parse_opts
 		$me->_apply_methods($child, $opts);
 		$me->_apply_roles($child, $opts);
 		
-		my $i; $i++ while caller($i) eq __PACKAGE__;
+		my $i = 0; $i++ while caller($i) eq __PACKAGE__;
 		$INC{module_notional_filename($child)} = (caller($i))[1];
 		
 		return $child;
@@ -415,7 +415,9 @@ Note that the C<subclass_of> function is only exported if
 C<< use Subclass::Of >> is called with no import list.
 
 The options supported are the same as with compile-time usage, except
-C<< -as >> is ignored.
+C<< -as >> is ignored. (No alias is generated.)
+
+The return value of C<subclass_of> is the name of the class as a string.
 
 =begin trustme
 
@@ -449,10 +451,16 @@ Try setting C<< -as >> to avoid this.
 
 =item I<< Subclass::Of is overwriting alias ... >>
 
-An alias is overwriting an existing sub.
+An alias is overwriting an existing alias created by Subclass::Of.
 
-Try setting C<< -as >> to avoid this, or use Subclass::Of in a smaller
-lexical scope.
+This can often happen if you try to create two subclasses of the same
+base class and rely on the automatically generated alias names:
+
+   use Subclass::Of "Foo::Bar", ...;  # alias = Bar
+   use Subclass::Of "Foo::Bar", ...;  # alias = Bar (warning!)
+
+Try explicitly setting C<< -as >> to avoid this, or use Subclass::Of
+in a smaller lexical scope.
 
 =back
 
@@ -474,6 +482,8 @@ Please report any bugs to
 L<http://rt.cpan.org/Dist/Display.html?Queue=Subclass-Of>.
 
 =head1 SEE ALSO
+
+L<base>, L<parent>, L<aliased>, L<as>, L<use>, L<Package::Butcher>.
 
 =head1 AUTHOR
 

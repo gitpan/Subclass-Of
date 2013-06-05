@@ -8,50 +8,55 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:r1370375964r0 a dcs:Addition ;
+_:r1370428811r0 a dcs:Addition ;
 	rdfs:label "Exportable 'subclass_of' function." .
-_:r1370375964r1 a dcs:Addition ;
+_:r1370428811r1 a dcs:Addition ;
 	rdfs:label "Public 'install' method." .
-_:r1370375964r2 a dcs:Addition ;
+_:r1370428811r10 a dcs:Documentation ;
+	rdfs:label "Minor clarifications." .
+_:r1370428811r11 a dcs:Documentation ;
+	rdfs:label "Added SEE ALSO section." .
+_:r1370428811r12 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Subclass/Of.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "Subclass::Of" .
+_:r1370428811r13 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Subclass/Of.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "Subclass::Of" .
+_:r1370428811r14 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Subclass/Of.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "Subclass::Of" .
+_:r1370428811r2 a dcs:Addition ;
 	rdfs:label "Support subclassing of Mouse classes." .
-_:r1370375964r3 a dcs:Packaging ;
+_:r1370428811r3 a dcs:Packaging ;
 	rdfs:label "A shed-load of test cases." .
-_:r1370375964r4 a dcs:Documentation ;
+_:r1370428811r4 a dcs:Documentation ;
 	rdfs:label "Much documentation." .
-_:r1370375964r5 a dcs:Change ;
+_:r1370428811r5 a dcs:Change ;
 	rdfs:label "Lexically scope aliases." .
-_:r1370375964r6 a dcs:Bugfix ;
+_:r1370428811r6 a dcs:Bugfix ;
 	rdfs:label "Mandatory 'redefine' warnings for constant subs in Perl prior to 5.16 caused test failures; stop allowing Perl to inline our 'constants', therefore avoid these warnings." .
-_:r1370375964r7 a dcs:Bugfix ;
+_:r1370428811r7 a dcs:Bugfix ;
 	rdfs:label "vstring warning in Perl 5.10.0 caused test failures." .
-_:r1370375964r8 a dcs:Change ;
+_:r1370428811r8 a dcs:Change ;
 	rdfs:label "Set %INC for generated classes." .
-_:r1370375964r9 a dcs:Addition ;
+_:r1370428811r9 a dcs:Addition ;
 	rdfs:label "Added example script." .
-_:r1370375965r10 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Subclass/Of.pm" ;
-	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
-	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
-	rdfs:label "Subclass::Of" .
-_:r1370375965r11 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Subclass/Of.pm" ;
-	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
-	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
-	rdfs:label "Subclass::Of" .
-_:r1370375965r12 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Subclass/Of.pm" ;
-	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
-	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
-	rdfs:label "Subclass::Of" .
-_:rb412395F8CD5111E2933E1F3B5BF283EDr0 dcs:item _:r1370375964r0, _:r1370375964r1, _:r1370375964r2, _:r1370375964r3, _:r1370375964r4, _:r1370375964r5 .
-_:rb412395F8CD5111E2933E1F3B5BF283EDr1 dcs:item _:r1370375964r6 .
-_:rb412395F8CD5111E2933E1F3B5BF283EDr2 dcs:item _:r1370375964r7, _:r1370375964r8, _:r1370375964r9 .
-_:rb412395F8CD5111E2933E1F3B5BF283EDr3 doap:browse <https://github.com/tobyink/p5-subclass-of> ;
+_:rb4C165DBCCDCC11E2AFC442525BF283EDr0 dcs:item _:r1370428811r0, _:r1370428811r1, _:r1370428811r2, _:r1370428811r3, _:r1370428811r4, _:r1370428811r5 .
+_:rb4C165DBCCDCC11E2AFC442525BF283EDr1 dcs:item _:r1370428811r6 .
+_:rb4C165DBCCDCC11E2AFC442525BF283EDr2 dcs:item _:r1370428811r7, _:r1370428811r8, _:r1370428811r9 .
+_:rb4C165DBCCDCC11E2AFC442525BF283EDr3 dcs:item _:r1370428811r10, _:r1370428811r11 .
+_:rb4C165DBCCDCC11E2AFC442525BF283EDr4 doap:browse <https://github.com/tobyink/p5-subclass-of> ;
 	a doap:GitRepository .
 <http://dev.perl.org/licenses/> <http://purl.org/dc/terms/title> "the same terms as the perl 5 programming language system itself" .
-dist:project cpant:perl_version_from _:r1370375965r10 ;
-	cpant:readme_from _:r1370375965r12 ;
+dist:project cpant:perl_version_from _:r1370428811r12 ;
+	cpant:readme_from _:r1370428811r14 ;
 	cpant:recommends "Moo 1.002000"^^cpant:dsWithVersion ;
 	cpant:requires "Exporter::TypeTiny"^^cpant:dsWithoutVersion, "List::MoreUtils"^^cpant:dsWithoutVersion, "Module::Runtime"^^cpant:dsWithoutVersion, "Sub::Name"^^cpant:dsWithoutVersion, "namespace::clean"^^cpant:dsWithoutVersion ;
 	cpant:test_requires "Test::More 0.96"^^cpant:dsWithVersion, "Test::Requires"^^cpant:dsWithoutVersion, "Test::Warn"^^cpant:dsWithoutVersion ;
-	cpant:version_from _:r1370375965r11 ;
+	cpant:version_from _:r1370428811r13 ;
 	<http://purl.org/dc/terms/contributor> cpan:tobyink ;
 	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=Subclass-Of> ;
 	doap:created "2013-05-29"^^<http://www.w3.org/2001/XMLSchema#date> ;
@@ -62,8 +67,8 @@ dist:project cpant:perl_version_from _:r1370375965r10 ;
 	doap:maintainer cpan:tobyink ;
 	doap:name "Subclass-Of" ;
 	doap:programming-language "Perl" ;
-	doap:release dist:v_0-000_01, dist:v_0-000_02, dist:v_0-000_03, dist:v_0-000_04 ;
-	doap:repository _:rb412395F8CD5111E2933E1F3B5BF283EDr3 ;
+	doap:release dist:v_0-000_01, dist:v_0-000_02, dist:v_0-000_03, dist:v_0-000_04, dist:v_0-001 ;
+	doap:repository _:rb4C165DBCCDCC11E2AFC442525BF283EDr4 ;
 	doap:shortdesc "import a magic subclass" ;
 	a doap:Project .
 dist:v_0-000_01 dcs:released-by cpan:tobyink ;
@@ -73,27 +78,34 @@ dist:v_0-000_01 dcs:released-by cpan:tobyink ;
 	doap:revision "0.000_01"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	a cpant:DeveloperRelease, doap:Version ;
 	rdfs:label "Developer preview" .
-dist:v_0-000_02 dcs:changeset _:rb412395F8CD5111E2933E1F3B5BF283EDr0 ;
+dist:v_0-000_02 dcs:changeset _:rb4C165DBCCDCC11E2AFC442525BF283EDr0 ;
 	dcs:released-by cpan:tobyink ;
 	<http://purl.org/dc/terms/identifier> "Subclass-Of-0.000_02"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<http://purl.org/dc/terms/issued> "2013-05-31"^^<http://www.w3.org/2001/XMLSchema#date> ;
 	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Subclass-Of-0.000_02.tar.gz> ;
 	doap:revision "0.000_02"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	a cpant:DeveloperRelease, doap:Version .
-dist:v_0-000_03 dcs:changeset _:rb412395F8CD5111E2933E1F3B5BF283EDr1 ;
+dist:v_0-000_03 dcs:changeset _:rb4C165DBCCDCC11E2AFC442525BF283EDr1 ;
 	dcs:released-by cpan:tobyink ;
 	<http://purl.org/dc/terms/identifier> "Subclass-Of-0.000_03"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<http://purl.org/dc/terms/issued> "2013-05-31"^^<http://www.w3.org/2001/XMLSchema#date> ;
 	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Subclass-Of-0.000_03.tar.gz> ;
 	doap:revision "0.000_03"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	a cpant:DeveloperRelease, doap:Version .
-dist:v_0-000_04 dcs:changeset _:rb412395F8CD5111E2933E1F3B5BF283EDr2 ;
+dist:v_0-000_04 dcs:changeset _:rb4C165DBCCDCC11E2AFC442525BF283EDr2 ;
 	dcs:released-by cpan:tobyink ;
 	<http://purl.org/dc/terms/identifier> "Subclass-Of-0.000_04"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<http://purl.org/dc/terms/issued> "2013-06-04"^^<http://www.w3.org/2001/XMLSchema#date> ;
 	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Subclass-Of-0.000_04.tar.gz> ;
 	doap:revision "0.000_04"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	a cpant:DeveloperRelease, doap:Version .
+dist:v_0-001 dcs:changeset _:rb4C165DBCCDCC11E2AFC442525BF283EDr3 ;
+	dcs:released-by cpan:tobyink ;
+	<http://purl.org/dc/terms/identifier> "Subclass-Of-0.001"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<http://purl.org/dc/terms/issued> "2013-06-05"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Subclass-Of-0.001.tar.gz> ;
+	doap:revision "0.001"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a doap:Version .
 cpan:tobyink a foaf:Person ;
 	foaf:mbox <mailto:tobyink@cpan.org> ;
 	foaf:name "Toby Inkster" ;

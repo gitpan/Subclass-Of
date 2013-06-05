@@ -93,7 +93,9 @@ DESCRIPTION
     Subclass::Of" is called with no import list.
 
     The options supported are the same as with compile-time usage, except
-    "-as" is ignored.
+    "-as" is ignored. (No alias is generated.)
+
+    The return value of "subclass_of" is the name of the class as a string.
 
   Wrapping Subclass::Of
     If you need to provide a wrapper for Subclass::Of, and thus install
@@ -109,10 +111,16 @@ DIAGNOSTICS
         Try setting "-as" to avoid this.
 
     *Subclass::Of is overwriting alias ...*
-        An alias is overwriting an existing sub.
+        An alias is overwriting an existing alias created by Subclass::Of.
 
-        Try setting "-as" to avoid this, or use Subclass::Of in a smaller
-        lexical scope.
+        This can often happen if you try to create two subclasses of the
+        same base class and rely on the automatically generated alias names:
+
+           use Subclass::Of "Foo::Bar", ...;  # alias = Bar
+           use Subclass::Of "Foo::Bar", ...;  # alias = Bar (warning!)
+
+        Try explicitly setting "-as" to avoid this, or use Subclass::Of in a
+        smaller lexical scope.
 
     There is no supported method to switch these warnings off. You should
     fix the problems they're telling you about.
@@ -132,6 +140,8 @@ BUGS
     <http://rt.cpan.org/Dist/Display.html?Queue=Subclass-Of>.
 
 SEE ALSO
+    base, parent, aliased, as, use, Package::Butcher.
+
 AUTHOR
     Toby Inkster <tobyink@cpan.org>.
 
