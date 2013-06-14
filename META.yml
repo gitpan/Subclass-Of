@@ -4,6 +4,7 @@ author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
+  Test::Fatal: 0
   Test::More: 0.96
   Test::Requires: 0
   Test::Warn: 0
@@ -39,4 +40,4 @@ resources:
   homepage: https://metacpan.org/release/Subclass-Of
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-subclass-of
-version: 0.001
+version: 0.002

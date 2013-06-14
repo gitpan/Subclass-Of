@@ -57,6 +57,30 @@ DESCRIPTION
         The package names of one or more roles (Moose::Role, Role::Tiny,
         etc) you wish to apply to your subclass.
 
+    "-has"
+        Attributes to apply to the child class. You can provide Moose-style
+        specifications for each attribute:
+
+           use Subclass::Of "MyClass",
+              -has => [
+                 foo   => (),    # default spec
+                 bar   => [...],
+                 baz   => {...},
+                 quux  => sub { "default" },
+              ];
+
+        Note that the attribute specifications need to be supported by the
+        OO framework of the parent class. Moose, Mouse and Moo all support
+        fairly similar attribute specs, but they differ on some details. The
+        "is", "default" and "required" options should be pretty safe bets;
+        "isa" will be fine if you're using Type::Tiny type constraints.
+
+        If the parent class is a plain old Perl class, then a small built-in
+        attribute builder is used, which assumes that the object is a
+        blessed hash. The builder supports "is", "isa" and "default" (which
+        is always treated as lazy). It only builds accessors, *not* a
+        constructor!
+
     "-package"
         The package name for the subclass. Usually you can ignore this;
         Subclass::Of will think one up of its own.
